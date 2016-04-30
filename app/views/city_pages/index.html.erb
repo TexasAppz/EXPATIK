@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing City Pages</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>City</th>
+      <th>Country</th>
+      <th>Continent</th>
+      <th>Article</th>
+      <th>G map</th>
+      <th>Twitter feed</th>
+      <th>Book suggestion</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @city_pages.each do |city_page| %>
+      <tr>
+        <td><%= city_page.city %></td>
+        <td><%= city_page.country %></td>
+        <td><%= city_page.continent %></td>
+        <td><%= city_page.article %></td>
+        <td><%= city_page.g_map %></td>
+        <td><%= city_page.twitter_feed %></td>
+        <td><%= city_page.book_suggestion %></td>
+        <td><%= link_to 'Show', city_page %></td>
+        <td><%= link_to 'Edit', edit_city_page_path(city_page) %></td>
+        <td><%= link_to 'Destroy', city_page, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New City page', new_city_page_path %>

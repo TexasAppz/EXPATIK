@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>City:</strong>
+  <%= @city_page.city %>
+</p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @city_page.country %>
+</p>
+
+<p>
+  <strong>Continent:</strong>
+  <%= @city_page.continent %>
+</p>
+
+<p>
+  <strong>Article:</strong>
+  <%= @city_page.article %>
+</p>
+
+<p>
+  <strong>G map:</strong>
+  <%= @city_page.g_map %>
+</p>
+
+<p>
+  <strong>Twitter feed:</strong>
+  <%= @city_page.twitter_feed %>
+</p>
+
+<p>
+  <strong>Book suggestion:</strong>
+  <%= @city_page.book_suggestion %>
+</p>
+
+<%= link_to 'Edit', edit_city_page_path(@city_page) %> |
+<%= link_to 'Back', city_pages_path %>

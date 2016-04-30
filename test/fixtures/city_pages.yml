@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  city: MyString
+  country: MyString
+  continent: MyString
+  article: MyString
+  g_map: MyString
+  twitter_feed: MyString
+  book_suggestion: MyString
+
+two:
+  city: MyString
+  country: MyString
+  continent: MyString
+  article: MyString
+  g_map: MyString
+  twitter_feed: MyString
+  book_suggestion: MyString
