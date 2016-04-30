@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Listing City Pages</h1>
-
+<%= link_to 'New City page', new_city_page_path %>
 <table>
   <thead>
     <tr>
@@ -36,4 +36,18 @@
 
 <br>
 
-<%= link_to 'New City page', new_city_page_path %>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple styled maps</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <div id="map">
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAnevA6XkR3QwkolBDRvehGc3x3eDY71OI&callback=initMap">
+    </script>
+    </div>
+  </body>
+</html>
