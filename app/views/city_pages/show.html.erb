@@ -44,19 +44,51 @@
   <%= @city_page.lon %>
 </p>
 
+
 <!-- Twitter Feed -->
 <a class="twitter-timeline" href="https://twitter.com/search?q=%23<%= @city_page.city %>%20%23expat" data-widget-id="<%= @city_page.twitter_feed %>" data-chrome="noborders transparent" data-aria-polite="assertive">Tweets about #test #expat</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
-
-
-<!-- <a class="twitter-timeline" href="https://twitter.com/search?q=%23<%= @city_page.city %>%20%23expat" data-widget-id="<%= @city_page.twitter_feed %>" width="300" height="100" data-tweet-limit="8">Tweets about #<%= @city_page.city %> #expat</a>
-
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script> -->
-
-
 <!-- Google Maps -->
-<div id="map">
+
+<div id="map"></div>
+<script>
+  function initMap() {
+    var customMapType = new google.maps.StyledMapType([
+        {
+          stylers: [
+            {hue: '#ffc83f'},
+            {visibility: 'simplified'},
+            {gamma: 0.6},
+            {weight: 0.5}
+          ]
+        },
+        {
+          elementType: 'labels',
+          stylers: [{visibility: 'on'}]
+        },
+        {
+          featureType: 'water',
+          stylers: [{color: '#142b44'}]
+        }
+      ], {
+        name: 'Custom Style'
+    });
+    var customMapTypeId = 'custom_style';
+
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 12,
+      center:
+      {lat: <%= @city_page.lat %>, lng: <%= @city_page.lon %>},  // Brooklyn.
+      mapTypeControlOptions: {
+        mapTypeIds: [google.maps.MapTypeId.ROADMAP, customMapTypeId]
+      }
+    });http://www.lonelyplanet.com/singapore/essential-information
+
+    map.mapTypes.set(customMapTypeId, customMapType);
+    map.setMapTypeId(customMapTypeId);
+  }
+</script>
 <script async defer
 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAnevA6XkR3QwkolBDRvehGc3x3eDY71OI&callback=initMap">
 </script>
