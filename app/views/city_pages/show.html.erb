@@ -1,9 +1,13 @@
+<body>
+
 <p id="notice"><%= notice %></p>
 
 <p>
   <strong>City:</strong>
   <%= @city_page.city %>
 </p>
+
+
 
 <p>
   <strong>Country:</strong>
@@ -40,5 +44,25 @@
   <%= @city_page.lon %>
 </p>
 
+<!-- Twitter Feed -->
+<a class="twitter-timeline" href="https://twitter.com/search?q=%23<%= @city_page.city %>%20%23expat" data-widget-id="<%= @city_page.twitter_feed %>" data-chrome="noborders transparent" data-aria-polite="assertive">Tweets about #test #expat</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+
+
+<!-- <a class="twitter-timeline" href="https://twitter.com/search?q=%23<%= @city_page.city %>%20%23expat" data-widget-id="<%= @city_page.twitter_feed %>" width="300" height="100" data-tweet-limit="8">Tweets about #<%= @city_page.city %> #expat</a>
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script> -->
+
+
+<!-- Google Maps -->
+<div id="map">
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAnevA6XkR3QwkolBDRvehGc3x3eDY71OI&callback=initMap">
+</script>
+
+
 <%= link_to 'Edit', edit_city_page_path(@city_page) %> |
 <%= link_to 'Back', city_pages_path %>
+
+</body>
