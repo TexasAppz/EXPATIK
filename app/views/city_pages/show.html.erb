@@ -21,8 +21,8 @@
 </p>
 
 <p>
-  <strong>G map:</strong>
-  <%= @city_page.g_map %>
+  <strong>Lat:</strong>
+  <%= @city_page.lat %>
 </p>
 
 <p>
@@ -33,6 +33,11 @@
 <p>
   <strong>Book suggestion:</strong>
   <%= @city_page.book_suggestion %>
+</p>
+
+<p>
+  <strong>Lon:</strong>
+  <%= @city_page.lon %>
 </p>
 
 <%= link_to 'Edit', edit_city_page_path(@city_page) %> |
