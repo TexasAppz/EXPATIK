@@ -1,100 +1,131 @@
-<body>
-
 <p id="notice"><%= notice %></p>
+<!DOCTYPE html>
+<html>
 
-<p>
-  <strong>City:</strong>
-  <%= @city_page.city %>
-</p>
-
-
-
-<p>
-  <strong>Country:</strong>
-  <%= @city_page.country %>
-</p>
-
-<p>
-  <strong>Continent:</strong>
-  <%= @city_page.continent %>
-</p>
-
-<p>
-  <strong>Article:</strong>
-  <%= @city_page.article %>
-</p>
-
-<p>
-  <strong>Lat:</strong>
-  <%= @city_page.lat %>
-</p>
-
-<p>
-  <strong>Twitter feed:</strong>
-  <%= @city_page.twitter_feed %>
-</p>
-
-<p>
-  <strong>Book suggestion:</strong>
-  <%= @city_page.book_suggestion %>
-</p>
-
-<p>
-  <strong>Lon:</strong>
-  <%= @city_page.lon %>
-</p>
-
-
-<!-- Twitter Feed -->
-<a class="twitter-timeline" href="https://twitter.com/search?q=%23<%= @city_page.city %>%20%23expat" data-widget-id="<%= @city_page.twitter_feed %>" data-chrome="noborders transparent" data-aria-polite="assertive">Tweets about #test #expat</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-
-<!-- Google Maps -->
-
-<div id="map"></div>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="generator" content="Responsive Site Designer 1.5.1350 - Beta Version">
+  <title>City Page</title>
+  <link rel="stylesheet" href="css/coffeegrinder.min.css">
+  <link rel="stylesheet" href="css/wireframe-theme.min.css">
+  <script>document.createElement( "picture" );</script>
+  <script src="js/picturefill.min.js" class="picturefill" async="async"></script>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed%7CRoboto:300,400,b">
+<!-- SMOOTH SCROLL -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script>
-  function initMap() {
-    var customMapType = new google.maps.StyledMapType([
-        {
-          stylers: [
-            {hue: '#ffc83f'},
-            {visibility: 'simplified'},
-            {gamma: 0.6},
-            {weight: 0.5}
-          ]
-        },
-        {
-          elementType: 'labels',
-          stylers: [{visibility: 'on'}]
-        },
-        {
-          featureType: 'water',
-          stylers: [{color: '#142b44'}]
-        }
-      ], {
-        name: 'Custom Style'
-    });
-    var customMapTypeId = 'custom_style';
-
-    var map = new google.maps.Map(document.getElementById('map'), {
-      zoom: 12,
-      center:
-      {lat: <%= @city_page.lat %>, lng: <%= @city_page.lon %>},  // Brooklyn.
-      mapTypeControlOptions: {
-        mapTypeIds: [google.maps.MapTypeId.ROADMAP, customMapTypeId]
+$(function() {
+  $('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
       }
-    });http://www.lonelyplanet.com/singapore/essential-information
-
-    map.mapTypes.set(customMapTypeId, customMapType);
-    map.setMapTypeId(customMapTypeId);
-  }
+    }
+  });
+});
 </script>
-<script async defer
-src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAnevA6XkR3QwkolBDRvehGc3x3eDY71OI&callback=initMap">
+<!-- End of SMOOTH SCROLL -->
+</head>
+
+<body>
+  <div class="row heading-row">
+    <header class="coffee-span-10 welcome_text" id="backtotop">
+      <div class="responsive-picture logo">
+        <picture><%= image_tag 'Expatik_logo.png' %>
+        </picture>
+      </div>
+      <h3 class="welcome-heading"><span class="heading-text-1">EXPAT<span class="heading-text-2">ik</span></span><br>
+      </h3>
+    </header>
+  </div>
+  <div class="row narrow-row portfolio-description" id="description">
+    <div class="coffee-span-10">
+      <h1><%= @city_page.city %></h1>
+      <h6><%= @city_page.country %>, <%= @city_page.continent %></h6>
+    </div>
+    <div class="coffee-span-6 coffee-849-span-10">
+      <p class="paragraph portfolio-description">
+        <%= @city_page.article %></p>
+    </div>
+    <div class="coffee-span-6 coffee-849-span-10">
+      <!-- Twitter Feed -->
+      <a class="twitter-timeline" href="https://twitter.com/search?q=%23<%= @city_page.city %>%20%23expat" data-widget-id="<%= @city_page.twitter_feed %>" data-chrome="noborders transparent" data-aria-polite="assertive">Tweets about #test #expat</a>
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    </div>
+  </div>
+</div>
+  <!-- Google Maps -->
+
+  <div id="map"></div>
+  <script>
+    function initMap() {
+      var customMapType = new google.maps.StyledMapType([
+          {
+            stylers: [
+              {hue: '#ffc83f'},
+              {visibility: 'simplified'},
+              {gamma: 0.6},
+              {weight: 0.5}
+            ]
+          },
+          {
+            elementType: 'labels',
+            stylers: [{visibility: 'on'}]
+          },
+          {
+            featureType: 'water',
+            stylers: [{color: '#142b44'}]
+          }
+        ], {
+          name: 'Custom Style'
+      });
+      var customMapTypeId = 'custom_style';
+
+      var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 12,
+        center:
+        {lat: <%= @city_page.lat %>, lng: <%= @city_page.lon %>},  // Brooklyn.
+        mapTypeControlOptions: {
+          mapTypeIds: [google.maps.MapTypeId.ROADMAP, customMapTypeId]
+        }
+      });http://www.lonelyplanet.com/singapore/essential-information
+
+      map.mapTypes.set(customMapTypeId, customMapType);
+      map.setMapTypeId(customMapTypeId);
+    }
+  </script>
+  <script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAnevA6XkR3QwkolBDRvehGc3x3eDY71OI&callback=initMap">
+  </script>
+    </div>
+  </div>
+  <footer class="row footer">
+    <div class="coffee-span-10 footer-col">
+      <h5 class="heading-2">About Us</h5>
+      <h5 class="heading-1">Contact Us</h5>
+      <div class="container footer_contact"><a href="#" target="_blank" class="social-image social-icon-5"><img class="facebook-icon" src="./socialicons/webicon-facebook.png" alt="Social Icon"></a><a href="#" target="_blank" class="social-image social-icon-4"><img class="twitter-icon" src="./socialicons/webicon-twitter.png" alt="Social Icon"></a><a href="#" target="_blank" class="social-image social-icon-3"><img class="googleplus-icon" src="./socialicons/webicon-googleplus.png" alt="Social Icon"></a><a href="#" target="_blank" class="social-image social-icon-2"><img class="youtube-icon" src="./socialicons/webicon-youtube.png" alt="Social Icon"></a><a href="#" target="_blank" class="social-image social-icon-1"><img class="linkedin-icon" src="./socialicons/webicon-linkedin.png" alt="Social Icon"></a>
+      </div><a href="#backtotop" class="responsive-picture" title="Back To Top" id="backtotoparrow"><picture><img alt="Back To Top" srcset="./CC_Theme/back-to-top-button.png" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></picture></a>
+    </div>
+  </footer>
+<script>
+if(navigator.userAgent.match(/Trident\/7\./)) {
+  document.body.addEventListener("mousewheel", function() {
+    event.preventDefault();
+    var wd = event.wheelDelta;
+    var csp = window.pageYOffset;
+    window.scrollTo(0, csp - wd);
+  });
+}
 </script>
-
-
-<%= link_to 'Edit', edit_city_page_path(@city_page) %> |
-<%= link_to 'Back', city_pages_path %>
-
 </body>
+
+</html>
