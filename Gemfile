@@ -4,6 +4,8 @@ ruby '2.3.0'
 gem 'rails_12factor'
 
 gem 'seed_dump'
+gem 'paperclip'
+
 
 gem 'nokogiri'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

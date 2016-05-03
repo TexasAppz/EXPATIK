@@ -10,7 +10,7 @@ class CityPagesController < ApplicationController
   # GET /city_pages/1
   # GET /city_pages/1.json
   def show
-  
+
   end
 
   # GET /city_pages/new

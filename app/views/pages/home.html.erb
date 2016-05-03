@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html>
 
-<<<<<<< HEAD
-
-<h1>HELLO EXPATS</h1>
-<h2>Find me in app/views/pages/home.html.erb</h2>
-<%= 'HOLA EXPATS AGAIN' %>
-<h2>More information</h2>
-
-=======
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -58,17 +48,28 @@ $(function() {
   </div>
   <div class="row narrow-row portfolio-description" id="description">
     <div class="coffee-span-10">
-      <h2 class="heading-3"><span class="heading-text-3">2016 Most desirable cities for expats</span>
-      </h2><select class="select drop-down-1" name="Select City">
-        <option selected>Select City</option>
+      <h2 class="heading-3"><span class="heading-text-3">2016 Most desirable cities for expats</span></h2>
+
+
+
+
+
+        <select onchange="window.location=this.value" class="select drop-down-1" name="Select City">
+        <option value='#'>Select City</option>
+        <option value='/city_pages/1'>Shanghai</option>
         <option value='/city_pages/2'>Singapore</option>
-        <!-- <option>City 4</option>
-        <option>City 5</option>
-        <option>City 6</option>
-        <option>City 7</option>
-        <option>City 8</option>
-        <option>City 9</option> -->
+        <option value='/city_pages/3'>Cape Town</option>
+        <option value='/city_pages/4'>Buenos Aires</option>
+        <option value='/city_pages/5'>Prague</option>
+        <option value='/city_pages/6'>Dubai</option>
+        <option value='/city_pages/7'>Medellin</option>
+        <option value='/city_pages/8'>Budapest</option>
+        <option value='/city_pages/9'>Roatan</option>
+        <option value='/city_pages/10'>Reykjavik</option>
+
       </select>
+
+
     </div>
     <div class="coffee-span-6 coffee-849-span-10">
       <p class="paragraph portfolio-description">Welcome to EXPATik, if you are moving overseas, setting abroad, a repatriate or just considering an expatriate adventure. EXPATik has ranked the best Ten Cities with career opportunities, affordable cost of living, accessible health care, beautiful weather, easy cultural adjustment, political stability and low security risk.</p>
