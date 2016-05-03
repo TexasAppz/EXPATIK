@@ -12,11 +12,11 @@ class CityPagesController < ApplicationController
   def show
     @books = HTTParty.get "https://www.googleapis.com/books/v1/volumes?q=#{CityPage.find(params[:id]).city}+expats&key=AIzaSyBi-ieqecE99YvszjWHBtq_eZORbhN-8HQ"
     @books = JSON.parse @books.body
-
-    @books_all = [@books["items"][0]["volumeInfo"]["title"],
-                  @books["items"][1]["volumeInfo"]["title"],
-                  @books["items"][2]["volumeInfo"]["title"]]
-
+    p @books["items"][0]["accessInfo"]["webReaderLink"]
+    @books_all = [@books["items"][0],
+                  @books["items"][1],
+                  @books["items"][2]
+                ]
 
   end
 

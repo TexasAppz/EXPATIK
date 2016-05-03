@@ -58,7 +58,7 @@ $(function() {
 
       <ul>
         <% @books_all.each do |items| %>
-        <li><%= items %></li>
+        <li><a href=<%=items['accessInfo']['webReaderLink']%>><%= items["volumeInfo"]["title"] %></a></li>
         <%end%>
       </ul>
       <!-- <img style="width: 50%;" src="https://www.expatnetwork.com/wp-content/uploads/2016/03/Expat-Medex-Home-Banner.jpg" alt="Ad">
