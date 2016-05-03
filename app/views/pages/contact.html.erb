@@ -1,44 +1,3 @@
-<<<<<<< HEAD
-<h1>Pages#contact</h1>
-<p>Find me in app/views/pages/contact.html.erb</p>
-<!-->
-<%= image_tag "Budapest1.jpg" %>
-<%= image_tag "Budapest2.jpg" %>
-<!-->
-<!-- <script type="text/javascript">
-var image1 = new.Image()
-image1.src = "Budapest1.jpg"
-
-var image2 = new.Image()
-image2.src = "Budapest2.jpg"
-
-var image3 = new.Image()
-image3.src = "Budapest3.jpg"
-
-var image4 = new.Image()
-image4.src = "Medellin1.jpg"
-
-</script>
-<style>
-
-body{background: blue; margin: 0 auto; text-align: center}
-</style>
-
-<img src="Budapest1.jpg" name="sildeshow" alt="imageslideshow">
-<script type="text/javascript">
-var numberImage = 1
-function myslide(){
-document.images.slideshow.src=eval("image"+numberImage+".src")
-if(numberImage < 4)
-  numberImage = numberImage + 1
-  else
-  numberImage = 1
-  setTimeout("myslide()", 4500)
-}
-myslide()
-
-</script> -->
-=======
 <!DOCTYPE html>
 <html>
 
@@ -80,7 +39,7 @@ $(function() {
   <div class="row heading-row">
     <header class="coffee-span-10 welcome_text" id="backtotop">
       <div class="responsive-picture logo">
-        <picture><img alt="Placeholder Picture" srcset="./Expatik_logo.png" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+        <picture><a href="https://shielded-fjord-23979.herokuapp.com/"><%= image_tag 'Expatik_logo.png' %></a>
         </picture>
       </div>
       <h3 class="welcome-heading"><span class="heading-text-1">EXPAT<span class="heading-text-2">ik</span></span><br>
@@ -97,8 +56,22 @@ $(function() {
   <footer class="row footer">
     <div class="coffee-span-10 footer-col">
       <h5 class="heading-2">About Us</h5>
-      <div class="container footer_contact"><a href="#" target="_blank" class="social-image social-icon-5"><img class="facebook-icon" src="./socialicons/webicon-facebook.png" alt="Social Icon"></a><a href="#" target="_blank" class="social-image social-icon-4"><img class="twitter-icon" src="./socialicons/webicon-twitter.png" alt="Social Icon"></a><a href="#" target="_blank" class="social-image social-icon-3"><img class="googleplus-icon" src="./socialicons/webicon-googleplus.png" alt="Social Icon"></a><a href="#" target="_blank" class="social-image social-icon-2"><img class="youtube-icon" src="./socialicons/webicon-youtube.png" alt="Social Icon"></a><a href="#" target="_blank" class="social-image social-icon-1"><img class="linkedin-icon" src="./socialicons/webicon-linkedin.png" alt="Social Icon"></a>
-      </div><a href="#backtotop" class="responsive-picture" title="Back To Top" id="backtotoparrow"><picture><img alt="Back To Top" srcset="./CC_Theme/back-to-top-button.png" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></picture></a>
+      <h5 class="heading-1">Contact Us</h5>
+      <div class="container footer_contact">
+
+<a href="#" target="_blank" class="social-image social-icon-5"><%= image_tag "webicon-facebook.png", alt: "Social Icon", class: "facebook-icon" %></a>
+
+<a href="#" target="_blank" class="social-image social-icon-4"><%= image_tag "webicon-twitter.png", alt: "Social Icon", class: "twitter-icon" %> </a>
+
+<a href="#" target="_blank" class="social-image social-icon-3"><%= image_tag "webicon-googleplus.png", alt: "Social Icon", class: "googleplus-icon" %> </a>
+
+<a href="#" target="_blank" class="social-image social-icon-2"> <%= image_tag "webicon-youtube.png", alt: "Social Icon", class:  "youtube-icon" %></a>
+
+<a href="#" target="_blank" class="social-image social-icon-1"><%= image_tag "webicon-linkedin.png", alt: "Social Icon", class: "linkedin-icon"  %> </a>
+
+      </div><a href="#backtotop" class="responsive-picture" title="Back To Top" id="backtotoparrow"><picture><img alt="Back To Top" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+        <%= image_tag "back-to-top-button.png" %>
+      </picture></a>
     </div>
   </footer>
 <script>
@@ -114,4 +87,3 @@ if(navigator.userAgent.match(/Trident\/7\./)) {
 </body>
 
 </html>
->>>>>>> 2df3710bc196983f8012fd23103f7f790b83a25e

@@ -3,7 +3,74 @@
   They will automatically be included in application.css.
 */
 
-/*
-  ====================================
-    GOOGLE MAPS STYLING
-  ====================================
+
+body > .row {
+ max-width: none;
+ width: auto;
+ background-image: none;
+}
+
+body > .row.narrow-row {
+ max-width: 1200px;
+}
+
+body > .row.narrow-row.portfolio-description {
+ margin-top: 23px;
+ margin-bottom: 66px;
+ padding-top: 1px;
+ padding-right: 44px;
+ padding-left: 40px;
+ background-image: none;
+ background-attachment: fixed;
+ background-position: center -2.7%;
+ background-size: cover;
+ background-repeat: repeat;
+}
+
+@media screen and (max-width: 849px) {
+ body > .row.narrow-row.portfolio-description {
+  margin-top: 10px;
+  margin-bottom: 0;
+ }
+}
+
+.row > [class*='coffee-span-'] > .container.footer_contact {
+ position: static;
+ display: -webkit-flex;
+ display:    -moz-flex;
+ display:     -ms-flex;
+ display:      -o-flex;
+ display:         flex;
+ clear: both;
+ overflow: auto;
+ margin-top: 49px;
+ margin-bottom: 15px;
+ margin-left: 0;
+ padding-top: 12px;
+ min-height: 75px;
+ vertical-align: middle;
+
+ -webkit-justify-content: center;
+    -moz-justify-content: center;
+     -ms-justify-content: center;
+      -o-justify-content: center;
+         justify-content: center;
+ -webkit-align-content: center;
+    -moz-align-content: center;
+     -ms-align-content: center;
+      -o-align-content: center;
+         align-content: center;
+ -webkit-align-items: center;
+    -moz-align-items: center;
+     -ms-align-items: center;
+      -o-align-items: center;
+         align-items: center;
+}
+
+@media screen and (max-width: 849px) {
+ .row > [class*='coffee-span-'] > .container.footer_contact {
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+ }
+}
