@@ -24,7 +24,7 @@
    ==================================== */
 
  #map {
-  height: 250px;
+  height: 300px;
   width: 100%;
 }
 
@@ -300,6 +300,11 @@ body > .row.heading-row {
   height: 100%;
 }
 
+body > .row.heading-row_cp {
+  width: 100%;
+  height: 10%;
+}
+
 a.responsive-picture#backtotoparrow {
   position: fixed;
   right: 10px;
@@ -508,6 +513,14 @@ div.responsive-picture.logo {
   border-top-right-radius: 100px 100px;
   border-bottom-right-radius: 100px 100px;
   border-bottom-left-radius: 100px 100px;
+}
+div.logo_cp {
+  width: 20%;
+  border-top-left-radius: 100px 100px;
+  border-top-right-radius: 100px 100px;
+  border-bottom-right-radius: 100px 100px;
+  border-bottom-left-radius: 100px 100px;
+  width: 25%;
 }
 
 a.social-image.social-icon-1 {
@@ -768,6 +781,19 @@ a.link-button-glyph.scroll-down:hover {
     padding-bottom: 60px;
     min-height: 50px;
     height: 100%;
+    background-image: -webkit-linear-gradient(180deg, rgba(44, 54, 67, 1) 0%, rgba(40, 138, 214, 1) 100%);
+    background-image:    -moz-linear-gradient(180deg, rgba(44, 54, 67, 1) 0%, rgba(40, 138, 214, 1) 100%);
+    background-image:     -ms-linear-gradient(180deg, rgba(44, 54, 67, 1) 0%, rgba(40, 138, 214, 1) 100%);
+    background-image:      -o-linear-gradient(180deg, rgba(44, 54, 67, 1) 0%, rgba(40, 138, 214, 1) 100%);
+    background-image:         linear-gradient(180deg, rgba(44, 54, 67, 1) 0%, rgba(40, 138, 214, 1) 100%);
+  }
+
+  body > .row > [class*='coffee-span-'].welcome_text_cp {
+    padding-top: 1%;
+    padding-right: 8px;
+    padding-bottom: 1%;
+    min-height: 50px;
+    height: 10%;
     background-image: -webkit-linear-gradient(180deg, rgba(44, 54, 67, 1) 0%, rgba(40, 138, 214, 1) 100%);
     background-image:    -moz-linear-gradient(180deg, rgba(44, 54, 67, 1) 0%, rgba(40, 138, 214, 1) 100%);
     background-image:     -ms-linear-gradient(180deg, rgba(44, 54, 67, 1) 0%, rgba(40, 138, 214, 1) 100%);
