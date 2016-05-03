@@ -43,16 +43,12 @@ $(function() {
       </h3>
       <p class="paragraph welcome-paragraph"> <span class="paragraph-text-1">An in-depth resource for the top ranked cities for expats.<br>Based on an annual study of world cities, EXPATik is a definitive resource&nbsp;of the world’s most desirable cities for the global citizen.&nbsp;<br></span><br>
       </p>
-      <a class="link-text text-link-1" href="#">Select A City »</a><a href="#description" class="link-button-glyph scroll-down"><span class="glyph-for-button scroll-down-icon"><i class="coffeecup-icons-arrow-down4"></i></span></a>
+      <a class="link-text text-link-1" href="#">Select A City »</a><a href="#description" class="link-button-glyph scroll-down"><span class="glyph-for-button scroll-down-icon"><img src="http://zlixir.com/assets/img/home-arrow.png"></span></a>
     </header>
   </div>
   <div class="row narrow-row portfolio-description" id="description">
     <div class="coffee-span-10">
       <h2 class="heading-3"><span class="heading-text-3">2016 Most desirable cities for expats</span></h2>
-
-
-
-
 
         <select onchange="window.location=this.value" class="select drop-down-1" name="Select City">
         <option value='#'>Select City</option>
@@ -66,9 +62,7 @@ $(function() {
         <option value='/city_pages/8'>Budapest</option>
         <option value='/city_pages/9'>Roatan</option>
         <option value='/city_pages/10'>Reykjavik</option>
-
       </select>
-
 
     </div>
     <div class="coffee-span-6 coffee-849-span-10">
@@ -76,22 +70,28 @@ $(function() {
       <p class="paragraph portfolio-description">Some of our favorites? Check out Bahia or Black Forest below. Plus the portfolio theme you’re currently browsing is pretty outstanding as well.</p>
     </div>
   </div>
-  <!-- <div class="row narrow-row">
-    <div class="coffee-span-4"><a href="#theme" class="responsive-picture toc-thumbnail"><picture><img alt="Visions" srcset="./CC_Theme/thumbnail-visions.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></picture></a><a class="link-button toc-link" href="#theme">Visions</a>
-    </div>
-    <div class="coffee-span-4"><a href="#theme2" class="responsive-picture toc-thumbnail"><picture><img alt="Flexbox Guide" srcset="./CC_Theme/thumbnail-flexbox.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></picture></a><a class="link-button toc-link" href="#theme2">FlexBox Guide</a>
-    </div> -->
-    <!-- <div class="coffee-span-4"><a href="#theme3" class="responsive-picture toc-thumbnail"><picture><img alt="Last Season" srcset="./CC_Theme/thumbnail-last-season.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></picture></a><a class="link-button toc-link" href="#theme3">Last Season</a> -->
     </div>
   </div>
+</div>
   <footer class="row footer">
     <div class="coffee-span-10 footer-col">
       <h5 class="heading-2">About Us</h5>
       <h5 class="heading-1">Contact Us</h5>
-      <div class="container footer_contact"><%= image_tag "webicon-facebook.png" %> <%= image_tag "webicon-twitter.png" %> <%= image_tag "webicon-googleplus.png" %> <%= image_tag "webicon-youtube.png" %> <%= image_tag "webicon-linkedin.png" %>
-      </div><a href="#backtotop" class="responsive-picture" title="Back To Top" id="backtotoparrow"><picture>
-        <%= image_tag "back-to-top-button.png" %></picture></a>
-      <%= link_to 'Show/Index Page', city_pages_path %>
+      <div class="container footer_contact">
+
+<a href="#" target="_blank" class="social-image social-icon-5"><%= image_tag "webicon-facebook.png", alt: "Social Icon", class: "facebook-icon" %></a>
+
+<a href="#" target="_blank" class="social-image social-icon-4"><%= image_tag "webicon-twitter.png", alt: "Social Icon", class: "twitter-icon" %> </a>
+
+<a href="#" target="_blank" class="social-image social-icon-3"><%= image_tag "webicon-googleplus.png", alt: "Social Icon", class: "googleplus-icon" %> </a>
+
+<a href="#" target="_blank" class="social-image social-icon-2"> <%= image_tag "webicon-youtube.png", alt: "Social Icon", class:  "youtube-icon" %></a>
+
+<a href="#" target="_blank" class="social-image social-icon-1"><%= image_tag "webicon-linkedin.png", alt: "Social Icon", class: "linkedin-icon"  %> </a>
+
+      </div><a href="#backtotop" class="responsive-picture" title="Back To Top" id="backtotoparrow"><picture><img alt="Back To Top" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+        <%= image_tag "back-to-top-button.png" %>
+      </picture></a>
     </div>
   </footer>
 <script>
@@ -105,6 +105,4 @@ if(navigator.userAgent.match(/Trident\/7\./)) {
 }
 </script>
 </body>
->>>>>>> 2df3710bc196983f8012fd23103f7f790b83a25e
-
 </html>
