@@ -5,6 +5,8 @@ gem 'rails_12factor'
 
 gem 'seed_dump'
 gem 'paperclip'
+gem 'httparty'
+require 'json'
 
 
 gem 'nokogiri'

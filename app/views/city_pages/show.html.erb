@@ -56,6 +56,11 @@ $(function() {
       <%= image_tag "#{@city_page.city}2.jpg" %>
       <%= image_tag "#{@city_page.city}3.jpg" %>
 
+      <ul>
+        <% @books_all.each do |items| %>
+        <li><%= items %></li>
+        <%end%>
+      </ul>
       <!-- <img style="width: 50%;" src="https://www.expatnetwork.com/wp-content/uploads/2016/03/Expat-Medex-Home-Banner.jpg" alt="Ad">
       <img style="width: 50%;" src="https://www.expatnetwork.com/wp-content/uploads/2014/12/WF-BANNER-270x140-1.gif" alt="Ad"> -->
 
