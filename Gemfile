@@ -1,8 +1,9 @@
 source 'https://rubygems.org'
 ruby '2.3.0'
 
+# gem 'rails-erd'
 gem 'rails_12factor'
-
+gem 'railroady'
 gem 'seed_dump'
 gem 'paperclip'
 gem 'httparty'
@@ -40,6 +41,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+
+group :development do
+  gem "rails-erd"
+end
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
